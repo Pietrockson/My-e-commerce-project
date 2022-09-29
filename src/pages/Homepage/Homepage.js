@@ -8,7 +8,6 @@ const Homepage =()=> {
     <div className='homepage'>
     <Directory/>
     </div>
-    
   );
 }
 

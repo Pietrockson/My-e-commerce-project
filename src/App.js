@@ -1,33 +1,15 @@
-import React from 'react';
-import { Route, Switch} from 'react-router-dom';
-import './App.css';
-import Homepage from './pages/Homepage/Homepage';
+import React from "react";
+import { Route, Switch } from "react-router-dom";
+import "./App.css";
+import Homepage from "./pages/Homepage/Homepage";
+import ShopPage from "./pages/Shop/Shop-Page";
 
-
-const HatsPage =()=> {
-  return(
-    <div>
-      <h1>HATS PAGE</h1>
-    </div>
-  );
-}
-
-// const GiveAway=()=> {
-//   return(
-//     <div>
-//       <h1>Give It Up</h1>
-//     </div>
-//   );
-// }
-
-function App () {
+function App() {
   return (
-    <div >
-      {/* using Routes in place of Switch and element in place of component as compatible with react-router-dom v6 */}
+    <div>
       <Switch>
-        <Route exact path='/' component={Homepage} />
-        <Route path='/hats' component={HatsPage} /> 
-        {/* <Route path='/hats/give' component={GiveAway} /> */}
+        <Route exact path="/" component={Homepage} />
+        <Route path="/shop" component={ShopPage} />
       </Switch>
     </div>
   );
