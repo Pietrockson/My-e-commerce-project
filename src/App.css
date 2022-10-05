@@ -1,8 +1,12 @@
 body{
-  font-family: 'Roboto Condensed', 'Openfair Display';
-  padding: 20px 60px;
+  font-family: 'Open Sans Condensed' 'Roboto Condensed', 'Openfair Display';
+  padding: 15px 45px;
 }
 a{
   text-decoration: none;
   color: black;
+}
+
+*{
+  box-sizing:border-box;
 }

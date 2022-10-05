@@ -56,7 +56,7 @@ class Directory extends React.Component{
   render(){
     return(
       <div className='directory-menu'>
-      {/*here, we use ES6 method of destructuring...rest to destructure the props we pass toreducethe verbisity of our code
+      {/*here, we use ES6 method of destructuring...rest to destructure the props we pass to reduce the verbosity of our code
       so instead of keep passsing thesame repeated props, we do the first object and rest */}
         {/* {this.state.sections.map(({id, title, imageUrl,  size, linkUrl}) => ( */}
         {this.state.sections.map(({id, ...otherSectionProps}) => (
