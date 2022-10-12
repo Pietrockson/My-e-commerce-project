@@ -12,6 +12,32 @@ const Config = {
   measurementId: "G-5DCYNB630W",
 };
 
+export const createUserProfileDocument = async (userAuth, additionalData) => {
+  if(!userAuth) return;
+  // console.log(firestore.doc('users/123fdrsertrsderwgbd'))
+  // in order to get the snapshop of the documenet we use a const and a string interpolation value as below
+  const userRef= firestore.doc(`users/${userAuth.uid}`);
+  const snapShot = await userRef.get();
+
+  if (!snapShot.exists) {
+    const {displayName, email} = userAuth
+    const createdAt = new Date();
+
+    try{
+      await userRef.set({
+        displayName,
+        email,
+        createdAt,
+        ...additionalData
+      })
+    } catch (error) {
+      console.log('error creating users', error.messages);
+    }
+  }
+
+  return userRef;
+};
+
 firebase.initializeApp(Config);
 
 export const auth = firebase.auth();
