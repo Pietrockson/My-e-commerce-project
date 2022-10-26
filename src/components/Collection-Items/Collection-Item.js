@@ -5,7 +5,7 @@ import { connect } from "react-redux";
 import CustomButton from "../Custom-button-component/Custom-button";
 import { addItem } from "../../Redux/Cart/Cart.action";
 
-const CollectionItem = ({ item, addItem }) => {
+const CollectionItem = ({item, addItem }) => {
   const { name, price, imageUrl } = item;
   return (
     <div className="collection-item">
