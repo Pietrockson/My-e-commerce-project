@@ -2,14 +2,14 @@ import firebase from "firebase/compat/app";
 import "firebase/compat/firestore";
 import "firebase/compat/auth";
 
-const Config = {
+const Config =  {
   apiKey: "AIzaSyBIKL8io8crZdbjuCuJmAI-7UysazVyc8I",
   authDomain: "crown-d-b.firebaseapp.com",
   projectId: "crown-d-b",
   storageBucket: "crown-d-b.appspot.com",
   messagingSenderId: "947159578208",
-  appId: "1:947159578208:web:e5475e210d82d6f995b505",
-  measurementId: "G-5DCYNB630W",
+  appId: "1:947159578208:web:ab0d2978e103cf4995b505",
+  measurementId: "G-Y1SMMS9YXK"
 };
 
 export const createUserProfileDocument = async (userAuth, additionalData) => {

@@ -1,6 +1,9 @@
 import React from 'react';
 import './Cart-Item.scss';
 
+import { connect } from 'react-redux';
+import { clearItemFromCart } from '../../Redux/Cart/Cart.action';
+
 
 const CartItem = ({item: {imageUrl, name, price, quantity} }) => (
   <div className='cart-item'>
@@ -14,4 +17,8 @@ const CartItem = ({item: {imageUrl, name, price, quantity} }) => (
   </div>
 );
 
-export default CartItem;
+const mapDispatchToProps = dispatch => ({
+  clearItem: item => dispatch(clearItemFromCart(item))
+})
+
+export default connect(null, mapDispatchToProps)(CartItem);
